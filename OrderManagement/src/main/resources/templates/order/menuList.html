@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Runners' HY</title>
+	<meta charset="UTF-8">
+	<title>Runners' HY</title>
+	<link rel="stylesheet" type="text/css" href="/css/menuList.css">
+	<script>
+		window.onload = () => {
+			//주문 페이지로 이동
+			const order = document.querySelector('.order');
+			order.addEventListener('click', ev => {
+				location.href = "/order/choice";
+			}, false);
+			
+		};
+	</script>
 </head>
 <body>
+	<span>[[${session.tblNum}]]번 테이블</span>&nbsp;<a href="/main/logout">로그 아웃</a>
 	<h1>Menu List</h1>
-	<div th:each="menu : ${menuList}">
-		<img src="" />
+	<div th:each="menu : ${menuList}" class="menu">
+		<img src="/images/ready.jpg" />
+		<input type="hidden" th:value="${menu.menuNum}" />
+		<h1>[[${menu.name}]]</h1>
+		<h1>[[${menu.price}]]</h1>
+		<a class="choice" href="/order/addList">선택</a>
+	</div>
+	
+	<br>
+	<br>
+	<br>
+	
+	<div class="order">
+		<span> 선택 내역 </span><span class="count">0</span>
 	</div>
 </body>
 </html>
