@@ -20,10 +20,9 @@
 	<h1>Menu List</h1>
 	<div th:each="menu : ${menuList}" class="menu">
 		<img src="/images/ready.jpg" />
-		<input type="hidden" th:value="${menu.menuNum}" />
 		<h1>[[${menu.name}]]</h1>
 		<h1>[[${menu.price}]]</h1>
-		<a class="choice" href="/order/addList">선택</a>
+		<a class="choice" th:href="@{/order/addList(menuNum=${menu.menuNum})}">선택</a>
 	</div>
 	
 	<br>
@@ -31,7 +30,8 @@
 	<br>
 	
 	<div class="order">
-		<span> 선택 내역 </span><span class="count">0</span>
+		<span> 선택 내역 </span>
+		<span class="count" th:text="${}"></span>
 	</div>
 </body>
 </html>

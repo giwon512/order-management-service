@@ -8,9 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mysite.dao.MapperInterface;
 import com.mysite.domain.Login;
 import com.mysite.domain.Menu;
+import com.mysite.repository.MapperInterface;
+import com.mysite.service.MenuService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -20,6 +21,9 @@ import jakarta.servlet.http.HttpSession;
 public class MainController {
 	@Autowired
 	private MapperInterface interFace;
+	
+	@Autowired
+	private MenuService menuService;
 	
 	@GetMapping("/login")
 	public String login(Login loginInfo, Model model, HttpServletRequest req) {
@@ -35,7 +39,12 @@ public class MainController {
 			session.setAttribute("tblNum", loginInfo.getTblNum());
 			
 			//메뉴 리스트 출력
-			List<Menu> list = interFace.getMenuList();
+			List<Menu> list = menuService.getMenuList();
+			if(list.size() == 0) {
+				menuService.makeMenuList();
+				list = menuService.getMenuList();
+			}
+			
 			model.addAttribute("menuList", list);
 			return "order/menuList";
 		}

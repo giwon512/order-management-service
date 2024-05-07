@@ -1,4 +1,4 @@
-package com.mysite.dao;
+package com.mysite.repository;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import com.mysite.domain.Menu;
 @Mapper
 public interface MapperInterface {
 	
-	@Select("select * from menulist")
-	List<Menu> getMenuList();
+//	@Select("select * from menulist")
+//	List<Menu> getMenuList();
 	
 //	@Insert("insert into customer values(#{tel}, #{tblNum})")
 //	int newCustomer(Customer customer);
