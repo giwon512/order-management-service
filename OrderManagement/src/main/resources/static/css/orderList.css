@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.title {
+	margin : 10px auto;
+	display : block;
+	text-align : center;
+}
+
+.orderList {
+	border : 1px solid gray;
+	border-radius : 10px;
+}
+
+.order {
+	margin-left : 10px;
+	margin-right : 10px;
+	position : relative;
+}
+
+.order h2 {
+	margin-bottom : 0px;
+	margin-top : 10px;
+}
+
+.order .remove {
+	position : absolute;
+	width : 50px;
+	height : 30px;
+	border : 1px solid gray;
+	text-align : center;
+	line-height : 30px;
+	right : 10px;
+	bottom : 10px;
+}
+
+.orderList a {
+	text-decoration : none;
+}
+
+.orderList h4 {
+	text-align : center;
+}
+
+.payInfo {
+	margin-top : 50px;
+	border : 1px solid gray;
+	border-radius : 10px;
+	padding-left : 10px;
+	padding-right : 10px;
+}
+
+.pay {
+	margin-top : 10px;
+	border : 1px solid gray;
+	border-radius : 10px;
+	text-align : center;
+}
+
+.pay:hover {
+	background-color : gray;
+	color : white;
+}

@@ -9,7 +9,7 @@
 			//주문 페이지로 이동
 			const order = document.querySelector('.order');
 			order.addEventListener('click', ev => {
-				location.href = "/order/choice";
+				location.href = "/order/orderList";
 			}, false);
 			
 		};
@@ -31,7 +31,8 @@
 	
 	<div class="order">
 		<span> 선택 내역 </span>
-		<span class="count" th:text="${}"></span>
+		<span class="count" th:if="${session.orderList == null}" th:text="0"></span>
+		<span class="count" th:unless="${session.orderList == null}" th:text="${session.orderList.size()}"></span>
 	</div>
 </body>
 </html>

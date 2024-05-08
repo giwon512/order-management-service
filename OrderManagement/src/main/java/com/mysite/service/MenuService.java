@@ -37,4 +37,10 @@ public class MenuService {
 	public void selectedListInit() {
 		selectedList.clear();
 	}
+	
+	public List<Menu> removeMenu(int idx) {
+		selectedList.remove(idx);
+		
+		return selectedList;
+	}
 }

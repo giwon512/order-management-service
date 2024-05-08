@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Runners' HY</title>
+<link rel="stylesheet" type="text/css" href="/css/orderList.css">
+	<script>
+		window.onload = () => {
+			//삭제 처리해주는 서비스 호출
+			const order = document.querySelector();
+			order.addEventListener('click', ev => {
+				
+			}, false);
+			
+		};
+	</script>
+</head>
+<body>
+	<h3 class="title">장바구니</h3>
+	<div class="orderList">
+		<div th:if="${session.orderList != null}" th:each="order, uState : ${session.orderList}" class="order">
+			<div>
+				<h2>[[${order.name}]]</h2><br>
+				[[${order.price}]]
+				<a class="remove" th:href="@{/order/removeList(menuIdx=${uState.count - 1})}">삭제</a>
+			</div>
+			<hr>
+		</div>
+		
+		<a href="/order/menuList"><h4>+ 메뉴 추가하기</h4></a>
+	</div>
+	
+	<div class="payInfo" th:if="${session.orderList != null}">
+		<h3>결제 계좌</h3>
+		국민 000000-00-000000 OOO
+		<hr>
+		<h3>결제 금액</h3>
+		<h4>[[${session.totalCost}]]원</h4>
+	</div>
+	
+	<div class="pay" th:if="${session.orderList != null}">
+		<h3>주문하기</h3>
+	</div>
+</body>
+</html>
