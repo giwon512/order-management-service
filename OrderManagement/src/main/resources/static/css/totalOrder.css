@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.info {
+	color : red;
+	height : 50px;
+	width : 400px;
+	border : 1px solid gray;
+	margin : 20px;
+	line-height : 50px;
+}

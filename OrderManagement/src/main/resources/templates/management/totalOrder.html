@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/totalOrder.css">
+</head>
+<body>
+	<h1>총 주문 관리 페이지</h1>
+	<hr>
+	<div class="info">
+		총 수입 : [[${totalCost}]]
+	</div>
+	<table border="1">
+		<tr>
+			<th>주문 번호</th><th>테이블 번호</th><th>주문 내역</th><th>금액</th><th>주문 시간</th>
+		</tr>
+		
+		<tr th:each="order : ${orderList}" th:object="${order}">
+			<td>[[*{orderNum}]]</td><td>[[*{tblNum}]]</td><td>[[*{ordered}]]</td><td>[[*{cost}]]</td><td>[[*{orderTime}]]</td>
+		</tr>
+		
+	</table>
+</body>
+</html>

@@ -23,7 +23,11 @@ public interface MapperInterface {
 	
 	@Select("select * from orderlist where state = 'N' order by orderNum desc")
 	List<Order> getOrderList();
+
+	@Select("select * from orderlist order by orderNum desc")
+	List<Order> getAllOrderList();
 	
 	@Update("update orderlist set state='Y' where orderNum=#{orderNum}")
 	int updateOrder(int orderNum);
+	
 }
