@@ -3,8 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <title>Runners' HY</title>
+<link rel="stylesheet" type="text/css" href="/css/manager.css">
+<script>
+	window.onload = () => {
+		const listLayer = document.querySelector('.list');
+		const btn = document.querySelector('.showBtn');
+		btn.addEventListener('click', ev=> {
+			if(listLayer.style.display == 'block'){
+				listLayer.style.display = 'none';
+				btn.innerHTML = '메뉴 리스트 보기';
+			}
+			else {
+				listLayer.style.display = 'block';
+				btn.innerHTML = '메뉴 리스트 닫기';
+			}
+		},false);
+	}
+</script>
 </head>
 <body>
 	<h1>Manager Page</h1>
+	<div class="showList">
+		<button class="showBtn">메뉴 리스트 보기</button>
+		<div class="list" style="display: none;">
+			1. 오뎅탕 <br>
+			2. 나초 <br>
+			3. 김치전 <br>
+			4. 해물부추전 <br>
+			5. 만두 <br>
+			6. 순두부열라면 <br>
+			7. 오뎅탕 & 김치전 세트 <br>
+			8. 오뎅탕 & 해물부추전 세트 <br>
+			9. 해물부추전 & 김치전 세트 <br>
+			10. 김치 <br>
+			11. 물 <br>
+			12. 사이다 <br>
+			13. 콜라 <br>
+			14. 소주 <br>
+		</div>
+	</div>
+	
+	<table border="1">
+		<tr>
+			<th>주문 번호</th><th>테이블 번호</th><th>주문 내역</th><th>주문 시간</th>
+			<th>금액</th><th>임금 확인</th><th>상태</th>
+		</tr>
+		
+		<tr th:each="order : ${orderList}" th:object="${order}">
+			<td>[[*{orderNum}]]</td><td>[[*{tblNum}]]</td><td>[[*{ordered}]]</td><td>[[*{orderTime}]]</td>
+			<td>[[*{cost}]]</td><td><input type="checkbox" class="checkbox"/></td>
+			<td><a class="finish" th:href="@{/manager/updateList(orderNum=*{orderNum})}">완료</a></td>
+		</tr>
+		
+	</table>
 </body>
 </html>

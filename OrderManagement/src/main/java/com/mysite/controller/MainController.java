@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mysite.domain.Login;
 import com.mysite.domain.Menu;
+import com.mysite.domain.Order;
 import com.mysite.repository.MapperInterface;
 import com.mysite.service.MenuService;
 
@@ -30,6 +31,9 @@ public class MainController {
 
 		//로그인 결과에 따라 페이지 이동
 		if(loginInfo.getTel().equals("system") && loginInfo.getTblNum().equals("1111")) {
+			List<Order> orderList = interFace.getOrderList();
+			model.addAttribute("orderList", orderList);
+			
 			return "management/manager";
 		}
 		else {

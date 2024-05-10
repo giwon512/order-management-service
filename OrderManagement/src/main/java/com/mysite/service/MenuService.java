@@ -71,10 +71,10 @@ public class MenuService {
 	
 	public Order getOrderInfo(HttpServletRequest request) {
 		Order newOrder = new Order();
-		String ordered = " / ";
+		String ordered = "/";
 		int cost = 0;
 		for(Menu menu : selectedList) {
-			ordered += menu.getMenuNum() + " / ";
+			ordered += menu.getMenuNum() + "/";
 			cost += menu.getPrice();
 		}
 		
