@@ -6,16 +6,19 @@
 <link rel="stylesheet" type="text/css" href="/css/orderList.css">
 	<script>
 		window.onload = () => {
-			//삭제 처리해주는 서비스 호출
-			const order = document.querySelector();
+			//주문 처리해주는 서비스 호출
+			const order = document.querySelector('.pay');
 			order.addEventListener('click', ev => {
-				
+				if(confirm('정말 주문하시겠습니까?')){
+					location.href = "/order/pay";
+				}
 			}, false);
 			
 		};
 	</script>
 </head>
 <body>
+	<a href="/order/menuList"><img class="back" src="/images/free-icon-left-arrow.png"></a>
 	<h3 class="title">장바구니</h3>
 	<div class="orderList">
 		<div th:if="${session.orderList != null}" th:each="order, uState : ${session.orderList}" class="order">

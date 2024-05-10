@@ -1,13 +1,9 @@
 package com.mysite.repository;
 
-import java.util.List;
-
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
-import com.mysite.domain.Login;
-import com.mysite.domain.Menu;
+import com.mysite.domain.Order;
 
 @Mapper
 public interface MapperInterface {
@@ -17,4 +13,7 @@ public interface MapperInterface {
 	
 //	@Insert("insert into customer values(#{tel}, #{tblNum})")
 //	int newCustomer(Customer customer);
+	
+	@Insert("insert into orderlist values(order_num.nextVal, #{tblNum}, #{ordered}, #{cost}, sysdate)")
+	int newOrder(Order order);
 }

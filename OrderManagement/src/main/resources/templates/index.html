@@ -6,14 +6,9 @@
 </head>
 <body>
 	<form action="/main/login">
-
-		<div th:if="${session.tel == null}">
+		<div>
 			<input type="tel" name="tel" placeholder="전화번호" required/> <br>
 			<input type="text" name="tblNum" placeholder="테이블번호" required/> <br>
-		</div>
-		<div th:if="${session.tel != null}">
-			<input type="tel" name="tel" placeholder="전화번호" th:value="${session.tel}" required/> <br>
-			<input type="text" name="tblNum" placeholder="테이블번호" th:value="${session.tblNum}" required/> <br>
 		</div>
 		<button>확인</button>
 	</form>

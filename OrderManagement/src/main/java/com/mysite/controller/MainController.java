@@ -35,17 +35,21 @@ public class MainController {
 		else {
 			//고객 등록
 			HttpSession session = req.getSession();
+			session.setMaxInactiveInterval(10*60);
 			session.setAttribute("tel", loginInfo.getTel());
 			session.setAttribute("tblNum", loginInfo.getTblNum());
 			
 			//메뉴 리스트 출력
-			List<Menu> list = menuService.getMenuList();
-			if(list.size() == 0) {
+			List<Menu> mainMenuList = menuService.getMainMenuList();
+			List<Menu> sideMenuList = menuService.getSideMenuList();
+			if(mainMenuList.size() == 0 || sideMenuList.size() == 0) {
 				menuService.makeMenuList();
-				list = menuService.getMenuList();
+				mainMenuList = menuService.getMainMenuList();
+				sideMenuList = menuService.getSideMenuList();
 			}
 			
-			model.addAttribute("menuList", list);
+			model.addAttribute("mainMenuList", mainMenuList);
+			model.addAttribute("sideMenuList", sideMenuList);
 			return "order/menuList";
 		}
 		

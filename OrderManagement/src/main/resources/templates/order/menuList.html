@@ -16,9 +16,21 @@
 	</script>
 </head>
 <body>
-	<span>[[${session.tblNum}]]번 테이블</span>&nbsp;<a href="/main/logout">로그 아웃</a>
+	<span th:if="${session.tblNum == null}">[[${param.tblNum}]]번 테이블</span>
+	<span th:unless="${session.tblNum == null}">[[${session.tblNum}]]번 테이블</span>
+	&nbsp;<a href="/main/logout">로그 아웃</a>
 	<h1>Menu List</h1>
-	<div th:each="menu : ${menuList}" class="menu">
+	
+	<h3>메인 메뉴</h3>
+	<div th:each="menu : ${mainMenuList}" class="menu">
+		<img src="/images/ready.jpg" />
+		<h1>[[${menu.name}]]</h1>
+		<h1>[[${menu.price}]]</h1>
+		<a class="choice" th:href="@{/order/addList(menuNum=${menu.menuNum})}">선택</a>
+	</div>
+	
+	<h3>사이드 / 음료</h3>
+	<div th:each="menu : ${sideMenuList}" class="menu">
 		<img src="/images/ready.jpg" />
 		<h1>[[${menu.name}]]</h1>
 		<h1>[[${menu.price}]]</h1>
