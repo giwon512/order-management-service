@@ -50,13 +50,14 @@ public class MainController {
 				menuService.makeMenuList();
 				mainMenuList = menuService.getMainMenuList();
 				sideMenuList = menuService.getSideMenuList();
+				session.setAttribute("orderList", null);
+				menuService.selectedListInit();
 			}
 			
 			model.addAttribute("mainMenuList", mainMenuList);
 			model.addAttribute("sideMenuList", sideMenuList);
 			return "order/menuList";
-		}
-		
+		} 	
 	}
 	
 	@GetMapping("/logout")

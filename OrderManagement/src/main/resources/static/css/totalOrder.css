@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
+.subject {
+	display : flex;
+}
+
+.back {
+	width : 25px;
+	height : 30px;
+	border : 1px solid gray;
+	padding : 3px 5px;
+	margin : 21px;
+}
+
+
 .info {
 	color : red;
 	height : 50px;

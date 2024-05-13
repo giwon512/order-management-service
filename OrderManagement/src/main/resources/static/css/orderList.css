@@ -1,5 +1,23 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+body {
+	font-family: 'Freesentation-9Black';
+}
+
 .back {
 	width : 25px;
 	height : 30px;
@@ -29,6 +47,7 @@
 .order h2 {
 	margin-bottom : 0px;
 	margin-top : 10px;
+	font-weight : 100;
 }
 
 .order .remove {

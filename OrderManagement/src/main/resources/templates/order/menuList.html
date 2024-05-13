@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta charset="UTF-8">
 	<title>Runners' HY</title>
 	<link rel="stylesheet" type="text/css" href="/css/menuList.css">
@@ -16,33 +17,61 @@
 	</script>
 </head>
 <body>
-	<span th:if="${session.tblNum == null}">[[${param.tblNum}]]번 테이블</span>
+<!-- <span th:if="${session.tblNum == null}">[[${param.tblNum}]]번 테이블</span>
 	<span th:unless="${session.tblNum == null}">[[${session.tblNum}]]번 테이블</span>
-	&nbsp;<a href="/main/logout">로그 아웃</a>
-	<h1>Menu List</h1>
-	
-	<h3>메인 메뉴</h3>
-	<div th:each="menu : ${mainMenuList}" class="menu">
-		<img src="/images/ready.jpg" />
-		<h1>[[${menu.name}]]</h1>
-		<h1>[[${menu.price}]]</h1>
-		<a class="choice" th:href="@{/order/addList(menuNum=${menu.menuNum})}">선택</a>
+	&nbsp;<a href="/main/logout">로그 아웃</a> -->
+	<div class="header">
+		<img src="/images/runnersIcon.jpg" />
+		<div class="subject">
+			<div>
+				<h1>러너스하이 주점</h1>
+				@hyu_runnershy<br><br>
+			</div>
+			<span th:if="${session.tblNum == null}" class="table">[[${param.tblNum}]]번 테이블</span>
+			<span th:unless="${session.tblNum == null}" class="table">[[${session.tblNum}]]번 테이블</span>
+		</div>
+		
+		<hr>
+		<span class="minimum">첫 주문금액</span> &nbsp; 20,000원<br><br>
+		<span class="minimum">이벤트</span><br>
+		신원호를 잡아라!!<br>
+		제거하면 안주 공짜<br><br>
 	</div>
 	
-	<h3>사이드 / 음료</h3>
-	<div th:each="menu : ${sideMenuList}" class="menu">
-		<img src="/images/ready.jpg" />
-		<h1>[[${menu.name}]]</h1>
-		<h1>[[${menu.price}]]</h1>
-		<a class="choice" th:href="@{/order/addList(menuNum=${menu.menuNum})}">선택</a>
+	<br><br>
+	
+	<div class="menuList">
+		<h3>메인 메뉴</h3>
+		<div th:each="menu : ${mainMenuList}" class="menu" th:onclick="|location.href='@{/order/addList(menuNum=${menu.menuNum})}'|">
+			<div>
+				<h1>[[${menu.name}]]</h1>
+				<h3>[[${menu.price}]]</h3>
+			</div>
+			<img th:src="@{${menu.imgURL}}" />
+			<!-- <a class="choice" th:href="@{/order/addList(menuNum=${menu.menuNum})}">선택</a> -->
+		</div>
 	</div>
+	<br><br>
+	
+	<div class="menuList">
+		<h3>사이드 / 음료</h3>
+		<div th:each="menu : ${sideMenuList}" class="menu" th:onclick="|location.href='@{/order/addList(menuNum=${menu.menuNum})}'|">
+			<div>
+				<h1>[[${menu.name}]]</h1>
+				<h3>[[${menu.price}]]</h3>
+			</div>
+			<img th:src="@{${menu.imgURL}}" />
+			<!-- <a class="choice" th:href="@{/order/addList(menuNum=${menu.menuNum})}">선택</a> -->
+		</div>
+	</div>
+	
 	
 	<br>
 	<br>
 	<br>
 	
 	<div class="order">
-		<span> 선택 내역 </span>
+		<img src="/images/shoppingCart.png">
 		<span class="count" th:if="${session.orderList == null}" th:text="0"></span>
 		<span class="count" th:unless="${session.orderList == null}" th:text="${session.orderList.size()}"></span>
 	</div>

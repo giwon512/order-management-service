@@ -17,21 +17,22 @@ public class MenuService {
 	private static List<Menu> selectedList = new ArrayList<>();
 	
 	public void makeMenuList() {
-		mainMenuList.add(new Menu(1, "오뎅탕", 16000));
-		mainMenuList.add(new Menu(2, "나쵸", 12000));
-		mainMenuList.add(new Menu(3, "김치전", 18000));
-		mainMenuList.add(new Menu(4, "해물부추전", 19000));
-		mainMenuList.add(new Menu(5, "만두", 8000));
-		mainMenuList.add(new Menu(6, "순두부열라면", 7000));
-		mainMenuList.add(new Menu(7, "오뎅탕&김치전 세트", 29000));
-		mainMenuList.add(new Menu(8, "오뎅탕&해물부추전 세트", 30000));
-		mainMenuList.add(new Menu(9, "해물부추전&김치전 세트", 34000));
+		mainMenuList.add(new Menu(1, "오뎅탕", 16000, "/images/foods/fishCake.jpeg"));
+		mainMenuList.add(new Menu(2, "나쵸", 12000, "/images/foods/nacho.jpg"));
+		mainMenuList.add(new Menu(3, "김치전", 18000, "/images/foods/kimchi.jpeg"));
+		mainMenuList.add(new Menu(4, "해물부추전", 19000, "/images/foods/buchu.jpeg"));
+		mainMenuList.add(new Menu(5, "만두", 8000, "/images/foods/mandu.jpeg"));
+		mainMenuList.add(new Menu(6, "순두부열라면", 7000, "/images/foods/ramen.jpg"));
+		mainMenuList.add(new Menu(7, "오뎅탕&김치전 세트", 29000, "/images/ready.jpg"));
+		mainMenuList.add(new Menu(8, "오뎅탕&해물부추전 세트", 30000, "/images/ready.jpg"));
+		mainMenuList.add(new Menu(9, "해물부추전&김치전 세트", 34000, "/images/ready.jpg"));
 		
-		sideMenuList.add(new Menu(10, "김치", 1000));
-		sideMenuList.add(new Menu(11, "물", 1000));
-		sideMenuList.add(new Menu(12, "사이다", 3000));
-		sideMenuList.add(new Menu(13, "콜라", 3000));
-		sideMenuList.add(new Menu(14, "소주", 5000));
+		sideMenuList.add(new Menu(10, "김치", 1000, "/images/foods/sideKimchi.jpg"));
+		sideMenuList.add(new Menu(11, "물", 1000, "/images/foods/water.png"));
+		sideMenuList.add(new Menu(12, "사이다", 3000, "/images/foods/cider.jpg"));
+		sideMenuList.add(new Menu(13, "콜라", 3000, "/images/foods/coke.jpg"));
+		sideMenuList.add(new Menu(14, "제로콜라", 3000, "/images/foods/zeroCoke.jpg"));
+		sideMenuList.add(new Menu(15, "소주", 5000, "/images/foods/soju.png"));
 	}
 	
 	public List<Menu> getMainMenuList() {

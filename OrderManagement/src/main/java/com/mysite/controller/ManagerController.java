@@ -32,8 +32,22 @@ public class ManagerController {
 	@GetMapping("/totalOrder")
 	public String tatalOrder(Model model) {
 		List<Order> orderList = interFace.getAllOrderList();
+		int totalCost = 0;
+		
+		for(Order order : orderList) { 
+			totalCost += order.getCost();
+		}
+		model.addAttribute("totalCost", totalCost);
 		model.addAttribute("orderList", orderList);
 		
 		return "management/totalOrder";
+	}
+	
+	@GetMapping("/back")
+	public String back(Model model) {
+		List<Order> orderList = interFace.getOrderList();
+		model.addAttribute("orderList", orderList);
+		
+		return "management/manager";
 	}
 }

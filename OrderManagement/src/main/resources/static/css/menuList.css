@@ -1,13 +1,63 @@
-img {
+
+
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+body {
+	font-family: 'Freesentation-9Black';
+	background-color : rgb(192, 192, 192);
+	margin : 0;
+}
+
+.header {
+	background-color : white;
+	padding-left : 10px;
+}
+
+.header > img {
+	width : 100vw;
+	height : 40vh;
+}
+
+.subject h1 {
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+
+.subject {
+	display : flex;
+	justify-content : space-between;
+	align-items : center;
+}
+
+.table {
+	color : blue;
+}
+
+.minimum {
+	color : gray;
+}
+
+.menu img {
 	width : 100px;
 	height : 100px;
 }
 
+.menuList {
+	padding : 10px;
+	background-color : white;
+}
+
 .menu {
 	position : relative;
-	border : 1px solid black;
+	border-bottom : 1px solid gray;
+	margin-bottom : 5px;
 	display : flex;
-	width : 400px;
+	justify-content : space-between;
 }
 
 .choice {
@@ -28,6 +78,32 @@ img {
 }
 
 
+.order img {
+	width : 100px;
+	height : 100px;
+	position : fixed;
+	bottom : 60px;
+	right : 30px;
+	background-color : rgb(192, 192, 192);
+	border-radius : 70%;
+}
+
+.order .count {
+	display : inline-block;
+	width : 40px;
+	height : 40px;
+	position : fixed;
+	bottom : 120px;
+	right : 30px;
+	border-radius : 70%;
+	color : white;
+	background-color : red;
+	text-align : center;
+	font-size : 25px;
+	line-height : 40px;
+}
+
+/*
 .order {
 	position : fixed;
 	bottom: 0px;
@@ -59,3 +135,4 @@ img {
 	border-radius : 20px;
 	color : white;
 }
+*/
