@@ -18,16 +18,17 @@ public interface MapperInterface {
 //	@Insert("insert into customer values(#{tel}, #{tblNum})")
 //	int newCustomer(Customer customer);
 	
-	@Insert("insert into orderlist values(order_num.nextVal, #{tblNum}, #{ordered}, #{cost}, sysdate, 'N')")
+	@Insert("INSERT INTO ORDER.orderlist(tblNum, ordered, cost, orderTime, state)"
+			+ "VALUES(#{tblNum}, #{ordered}, #{cost}, SYSDATE(), 'N')")
 	int newOrder(Order order);
 	
-	@Select("select * from orderlist where state = 'N' order by orderNum desc")
+	@Select("select * from ORDER.orderlist where state = 'N' order by orderNum desc")
 	List<Order> getOrderList();
 
-	@Select("select * from orderlist order by orderNum desc")
+	@Select("select * from ORDER.orderlist order by orderNum desc")
 	List<Order> getAllOrderList();
 	
-	@Update("update orderlist set state='Y' where orderNum=#{orderNum}")
+	@Update("update ORDER.orderlist set state='Y' where orderNum=#{orderNum}")
 	int updateOrder(int orderNum);
 	
 }
