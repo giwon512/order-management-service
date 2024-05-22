@@ -30,7 +30,7 @@ public class MainController {
 	public String login(Login loginInfo, Model model, HttpServletRequest req) {
 
 		//로그인 결과에 따라 페이지 이동
-		if(loginInfo.getTel().equals("system") && loginInfo.getTblNum().equals("1111")) {
+		if(loginInfo.getPage().equals("manager")) {
 			List<Order> orderList = interFace.getOrderList();
 			model.addAttribute("orderList", orderList);
 			
@@ -39,9 +39,9 @@ public class MainController {
 		else {
 			//고객 등록
 			HttpSession session = req.getSession();
-			session.setMaxInactiveInterval(10*60);
-			session.setAttribute("tel", loginInfo.getTel());
-			session.setAttribute("tblNum", loginInfo.getTblNum());
+			session.setMaxInactiveInterval(60*60);
+//			session.setAttribute("tel", loginInfo.getTel());
+			session.setAttribute("tblNum", loginInfo.getPage());
 			
 			//메뉴 리스트 출력
 			List<Menu> mainMenuList = menuService.getMainMenuList();

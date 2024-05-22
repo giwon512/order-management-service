@@ -114,12 +114,15 @@ public class OrderController {
 		}
 		
 		Order newOrder = menuService.getOrderInfo(req);
+		if(newOrder.getCost() == 0) {
+			return "order/orderList";
+		}
 		interFace.newOrder(newOrder);
 		
 		//저장된 세션 정보들 초기화 
 		menuService.selectedListInit();
 		
 //		req.getSession().setAttribute("totalCost", 0);
-		return "order/orderList";
+		return "index";
 	}
 }
