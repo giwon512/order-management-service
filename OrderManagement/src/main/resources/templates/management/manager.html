@@ -49,12 +49,12 @@
 	<table border="1">
 		<tr>
 			<th>주문 번호</th><th>테이블 번호</th><th>주문 내역</th><th>주문 시간</th>
-			<th>금액</th><th>임금 확인</th><th>상태</th>
+			<th>금액</th><th>상태</th>
 		</tr>
 		
 		<tr th:each="order : ${orderList}" th:object="${order}">
 			<td>[[*{orderNum}]]</td><td>[[*{tblNum}]]</td><td>[[*{ordered}]]</td><td>[[*{orderTime}]]</td>
-			<td>[[*{cost}]]</td><td><input type="checkbox" class="checkbox"/></td>
+			<td>[[*{cost}]]</td>
 			<td><a class="finish" th:href="@{/manager/updateList(orderNum=*{orderNum})}">완료</a></td>
 		</tr>
 		
