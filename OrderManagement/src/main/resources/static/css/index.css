@@ -15,4 +15,5 @@ select {
 button {
 	display : inline-block;
 	width : 20%;
+	font-size : 50px;
 }
