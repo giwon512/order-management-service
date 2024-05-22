@@ -52,7 +52,7 @@ public class MenuService {
 //		System.out.println(menuNum);
 //		System.out.println(selectedList);
 		if(menuNum < 10) {
-			selectedList.add(mainMenuList.get(menuNum - 1));
+			selectedList.add(mainMenuList.get(menuNum));
 		}
 		else {
 			selectedList.add(sideMenuList.get(menuNum - 10));
