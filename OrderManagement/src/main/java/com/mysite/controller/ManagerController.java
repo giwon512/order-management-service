@@ -50,4 +50,9 @@ public class ManagerController {
 		
 		return "management/manager";
 	}
+	
+	@GetMapping("/index")
+	public String index() {
+		return "index";
+	}
 }
