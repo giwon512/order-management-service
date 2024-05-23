@@ -25,7 +25,8 @@
 			<div>
 				<h2>[[${order.name}]]</h2><br>
 				[[${order.price}]]
-				<a class="remove" th:href="@{/order/removeList(menuIdx=${uState.count - 1})}">삭제</a>
+				<!-- <a class="remove" th:href="@{/order/removeList(menuIdx=${uState.count - 1})}">삭제</a> -->
+				<a class="remove" th:onclick="|location.href='@{/order/removeList(menuIdx=${uState.count - 1})}'|">삭제</a>
 			</div>
 			<hr>
 		</div>

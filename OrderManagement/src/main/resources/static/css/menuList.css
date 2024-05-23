@@ -1,4 +1,7 @@
-
+button, a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
 
 @font-face {
     font-family: 'Freesentation-9Black';
