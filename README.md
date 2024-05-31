@@ -20,9 +20,9 @@ https://github.com/giwon512/order-management-service
 
 
 <p align="center">  
-  <img src="![springboot](https://github.com/giwon512/order-management-service/assets/64604990/c6d1d0dc-eafd-4ecd-9621-366f36b4e1bb)" align="center" width="32%">  
-  <img src="![java](https://github.com/giwon512/order-management-service/assets/64604990/682e8c38-186b-477d-97d5-de70068b1236)" align="center" width="32%">  
-  <img src="![mybatis](https://github.com/giwon512/order-management-service/assets/64604990/9ffaf2fa-a37f-45fc-a1ab-43ccd3502349)" align="center" width="32%"> 
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/c6d1d0dc-eafd-4ecd-9621-366f36b4e1bb" align="center" width="32%">  
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/682e8c38-186b-477d-97d5-de70068b1236" align="center" width="32%">  
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/9ffaf2fa-a37f-45fc-a1ab-43ccd3502349" align="center" width="32%"> 
 </p>
 
 ![thymeleaf-logo.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/64d31687-4101-45e2-a8d8-190f22e9e6ce/thymeleaf-logo.png)
