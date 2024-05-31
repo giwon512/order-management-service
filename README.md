@@ -17,6 +17,7 @@ https://github.com/giwon512/order-management-service
 3. 외부 DB 설계 및 연결 후, 외부 서버에 최종 배포(클라우드 타입 활용)
 
 # 📚 활용된 개발 언어 및 환경
+![springboot](https://github.com/giwon512/order-management-service/assets/64604990/c6d1d0dc-eafd-4ecd-9621-366f36b4e1bb)
 
 ![springboot.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/4c8f3b51-1864-4f17-98bb-a034e5972cc2/springboot.png)
 
