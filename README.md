@@ -25,28 +25,35 @@ https://github.com/giwon512/order-management-service
   <img src="https://github.com/giwon512/order-management-service/assets/64604990/9ffaf2fa-a37f-45fc-a1ab-43ccd3502349" align="center" width="32%"> 
 </p>
 
-![thymeleaf-logo.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/64d31687-4101-45e2-a8d8-190f22e9e6ce/thymeleaf-logo.png)
+<p align="center">  
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/e5a2af88-080b-4d17-8887-4006d45d851e"
+ align="center" width="32%">  
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/1a05b46a-cb68-4a28-997b-06b7d687e623" align="center" width="32%">  
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/54f9c9b0-2c56-4755-ac40-f279983a71dd" align="center" width="32%"> 
+</p>
 
-![lombok.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/550e905e-139d-4980-8eee-056e5d8cf24c/lombok.png)
+<p align="center">  
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/d8c8dbf5-826f-4440-b645-131046446b95"
+ align="center" width="32%">  
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/8e5f78ac-1057-4965-95ae-52069f3d8554" align="center" width="32%">  
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/002d1471-ba11-4e2d-b74e-a53be3d4a1bd"
+ align="center" width="32%"> 
+</p>
 
-![tomcat.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/3d8d0f49-7785-4ed8-b46c-18c0662e8636/tomcat.png)
-
-![mariadb.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/d874938a-b750-4612-ad60-f3caa8206f8c/mariadb.png)
-
-![htmlCssJs.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/6e16b2b9-c8c2-45a5-9b0f-b9ac0f688cb2/htmlCssJs.png)
-
-![heidisql.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/c7ffccaa-b8a2-4be6-bc0f-77951b3ca07b/heidisql.png)
-
-![sts4.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/feb9772e-94bf-4391-8885-5f26dc7b9f94/sts4.png)
-
-![cloudtype.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/164ddbbc-4e9c-4b33-b3f6-a54c86adb346/cloudtype.png)
-
-![postman.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/e984ab04-3a77-4792-b2c6-0eff2cb2058f/postman.png)
-
-# 🗂️ 서비스 사이트맵 구조
-
-![sitediagram.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/d992f2d4-4643-41a5-9ca3-70ec2f71a8ee/sitediagram.png)
+<p align="center">  
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/c0243a09-79f7-42d3-b721-f573729bca1b"
+ align="center" width="32%">  
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/ad83112a-cf70-48b7-bc35-804c0473a54a"
+ align="center" width="32%">  
+  <img src="https://github.com/giwon512/order-management-service/assets/64604990/67ae47f3-14de-4ad6-9e35-63a6a2563e80" align="center" width="32%"> 
+</p>
 
 # 🗂️ 프로젝트 아키텍처
 
-![architecture.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/67bf9e45-f266-46b8-9cde-cade1e31b6ab/f8922f6d-6759-4dd0-b3f6-8dbc096fa2f5/architecture.png)
+![architecture](https://github.com/giwon512/order-management-service/assets/64604990/8dbec969-c1fd-4139-870c-5990e13b0d1a)
+
+
+# 🗂️ 서비스 사이트맵 구조
+
+![sitediagram](https://github.com/giwon512/order-management-service/assets/64604990/b04b410e-276f-4bc1-bc3c-7999a79e23c7)
+
