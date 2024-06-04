@@ -1,8 +1,8 @@
 # order-management-service
 
-📄 **github**
+📄 **Blog**
 
-https://github.com/giwon512/order-management-service
+[https://github.com/giwon512/order-management-service](https://giwon512.github.io/project/OrderManagement/)
 
 # 🖊️프로젝트를 시작하게 된 계기
 
